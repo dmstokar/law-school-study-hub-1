@@ -75,7 +75,7 @@
   <script>
     const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
     // After deploying the Cloudflare Worker, replace this with its URL ending in /api/chat.
-    const AI_API_URL='https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev/api/chat';
+    const AI_API_URL='https://law-school-hub-ai.dmstokar-law-hub.workers.dev/api/chat';
     const store={get(k,f){try{return JSON.parse(localStorage.getItem('briefcase-'+k))??f}catch{return f}},set(k,v){localStorage.setItem('briefcase-'+k,JSON.stringify(v))}};
     const saved={briefs:store.get('briefs',[]),deadlines:store.get('deadlines',[]),rules:store.get('rules',[]),tasks:store.get('tasks',[]),checks:store.get('checks',{})};
     const date=new Date(); $('#today').textContent=date.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric',year:'numeric'});$('#welcomeDate').textContent=date.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
